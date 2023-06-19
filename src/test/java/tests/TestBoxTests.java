@@ -1,3 +1,5 @@
+package tests;
+
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -16,7 +18,7 @@ public class TestBoxTests {
 
     @Test
     void fillFormTests(){
-       open("/text-box");
+        open("/text-box");
         $("#=userName").setValue("Andrey Mozerov");
         $("#=userEmail").setValue("andreymoz@mail.ru");
         $("#=currentAddress").setValue("Moscow");

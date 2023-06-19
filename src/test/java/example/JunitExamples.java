@@ -1,3 +1,5 @@
+package example;
+
 import org.junit.jupiter.api.*;
 
 public class JunitExamples {
