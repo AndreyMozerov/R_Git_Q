@@ -16,28 +16,38 @@ private SelenideElement
         lastNameInput = $("#lastName"),
         userEmailInput = $("#userEmail");
 
-    public  void openPage(){
+    public  RegisrationPage openPage(){
 
         open("/automation-practice-form");
         $(".practice-form-wrapper").shouldHave(text(TITLE_TEXT));
         executeJavaScript("$('#fixedban').remove()");
         executeJavaScript("$('footer').remove()");
+        return this;
     }
 
-    public void SetFirstName(String value){
+    public RegisrationPage SetFirstName(String value){
+
         firstNameInput.setValue(value);
+        return this;
     }
-    public void SetLastName(String value){
+    public RegisrationPage SetLastName(String value){
+
         lastNameInput.setValue(value);
+        return this;
     }
-    public void SetUserEmail(String value){
+    public RegisrationPage SetUserEmail(String value){
+
         userEmailInput.setValue(value);
+        return this;
     }
-    public void SetGender(String value){
+    public RegisrationPage SetGender(String value){
         $("#genterWrapper").$(byText(value)).click();
+        return this;
     }
-    public void SetPhone(String value){
+    public RegisrationPage SetPhone(String value){
+
         $("#userNumber").setValue(value);
+        return this;
     }
 
 
